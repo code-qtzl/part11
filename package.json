@@ -1,0 +1,9 @@
+{
+	"name": "post-it-board",
+	"version": "1.0.0",
+	"scripts": {
+		"install:all": "cd backend && npm install && cd ../frontend && npm install",
+		"dev": "echo \"🫣 Wrong folder?: 'npm run dev' should be run in ./frontend directory\" && echo \"💡 Try: 'cd frontend && npm run dev'\" && exit 1",
+		"start": "echo \"🫣 Wrong folder?: 'npm run backend' should be run in ./backend directory\" && echo \"💡 Try: 'cd backend && npm run backend'\" && exit 1"
+	}
+}
