@@ -1,5 +1,5 @@
 {
-	"name": "post-it-board",
+	"name": "part11-blogApp",
 	"version": "1.0.0",
 	"scripts": {
 		"install:all": "cd backend && npm install && cd ../frontend && npm install",
