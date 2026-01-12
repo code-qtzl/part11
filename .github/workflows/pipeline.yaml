@@ -31,7 +31,7 @@ jobs:
                   node-version: '20'
             - name: Install dependencies
               run: npm run install:all
-            #- name: Check style
+            #- name: Check styles
             #  run: npm run eslint
             - name: Build
               working-directory: ./frontend/
