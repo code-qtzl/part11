@@ -23,3 +23,23 @@ jobs:
             - name: Build
               working-directory: ./frontend/
               run: npm run build
+            # environment variables
+            - name: Run backend tests
+              working-directory: ./backend/
+              env:
+                  MONGODB_URI: ${{ secrets.MONGODB_URI }}
+                  SECRET: ${{ secrets.TEST_SECRET }}
+                  NODE_ENV: test
+              run: npm test
+    # tag_release:
+    #     needs: [simple_deployment_pipeline]
+    #     runs-on: ubuntu-22.04
+    #     if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') }}
+    #     steps:
+    #         - name: Checkout Code
+    #           uses: actions/checkout@v4
+    #         - name: Bump version and push tag
+    #           uses: anothrNick/github-tag-action@1.64.0
+    #           env:
+    #               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #               DEFAULT_BUMP: patch
