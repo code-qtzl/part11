@@ -6,7 +6,7 @@ const api = supertest(app);
 const helper = require('./test_helper');
 const assert = require('assert');
 
-const Blog = require('../models/blog');
+const Blog = require('../models/blogs');
 const User = require('../models/users');
 
 const testUser = {
